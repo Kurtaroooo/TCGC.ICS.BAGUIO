@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('loginpic.jfif') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1; 
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 300px;
+        }
+
+        .ICS {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1; 
+        }
+
+        .Header {
+            position: absolute;
+            top:20px;
+            right: 100px;
+            z-index: 1; 
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            text-align: left;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background: #6495ED;
+            border: 0;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group .forgot-password {
+            text-align: right;
+            color: #6495ED;
+            text-decoration: none;
+        }
+
+    </style>
+    <script>
+        function loginAndRedirect() {
+            var email = document.getElementById('Email').value;
+            var password = document.getElementById('Password').value;
+            if (email === 'admin' && password === '12345') {
+                alert("Login Successfully");
+                window.location.href = "homepagelmc.html";
+            } else {
+                alert("Please Enter Your Student ID and Password");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3>Login</h3>
+        <form>
+            <div class="image">
+   
+      </div>
+            <div class="ICS">
+    
+      </div>
+           <div class="Header">
+      </div>
+            <div class="form-group">
+                <label for="Email"> Student ID</label>
+                <input type="text" id="Email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="password" required>
+            </div>
+            <div class="form-group Login">
+                <button type="button" onclick="loginAndRedirect()">Login</button>
+            </div>  
+        </form>
+    </div>
+</body>
+</html>

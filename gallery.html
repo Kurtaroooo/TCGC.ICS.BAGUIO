@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align: center;
+        }
+
+        .photo {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 30%;
+            margin: 10px;
+            position: relative;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .other-photos {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .other-photos img {
+            width: 30%;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .other-photos p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="photo" onclick="toggleOtherPhotos('other1')">
+            <img src="cheerdancethumbnail (2).png" alt="Image 1">
+            <h3>CHEERDANCE</h3>
+            <p><b><mark>"The cheerdance competition is an electrifying showcase of athleticism, artistry, and teamwork, where cheerleaders from various schools and organizations come together to compete in a vibrant display of energy and enthusiasm. This event transcends mere performance; it is a celebration of school spirit, camaraderie, and the relentless pursuit of excellence."</mark></b></p>
+            <div class="other-photos" id="other1">
+                <h4>BACK</h4>
+                <img src="CHEERDANCE.jpg" alt="Other Image 1">
+                <p><b>The routines are often themed, telling a story or conveying a message that resonates with both the performers and the spectators.</b></p>
+                <img src="CHEERDANCEv2.jpg" alt="Other Image 2">
+                <p><b>The competition not only highlights the physical prowess of the cheerleaders but also their ability to work as a cohesive unit, showcasing trust and communication as they execute daring stunts and intricate formations.</b></p>
+                <img src="CHEERDANCEv3.jpg" alt="Other Image 3">
+                <p><b>The atmosphere is electric, filled with colorful uniforms, spirited banners, and the infectious enthusiasm of fans who come to cheer for their favorite teams.</b></p>
+            </div>
+        </div>
+        <div class="photo" onclick="toggleOtherPhotos('other2')">
+            <img src="mr&msthumbnail.png" alt="Image 2">
+            <h3>MR&MS</h3>
+            <p><mark><b>"The Mr. and Ms. Competition is a dazzling celebration of charisma, talent, and individuality, where participants showcase their unique personalities and skills in a quest for the coveted titles."</b></mark></p>
+            <div class="other-photos" id="other2">
+                <h4>BACK</h4>
+                <img src="MR&MS.jpg" alt="Other Image 1">
+                <p><b>This event transcends traditional beauty pageants, emphasizing not only physical appearance but also confidence, intelligence, and the ability to engage with the audience.</b></p>
+                <img src="MR&MS.v1jpg.jpg" alt="Other Image 2">
+                <p><b>Contestants participate in various segments, including interviews, talent showcases, and evening wear presentations, all designed to highlight their strengths and aspirations.</b></p>
+                <img src="MR&MS.v3jpg.jpg" alt="Other Image 3">
+                <p><b>Contestants participate in various segments, including interviews, talent showcases, and evening wear presentations, all designed to highlight their strengths and aspirations.</b></p>
+            </div>
+        </div>
+        <div class="photo" onclick="toggleOtherPhotos('other3')">
+            <img src="hiphopthumbnail.png" alt="Image 3">
+            <h3>HIPHOP</h3>
+            <p><b><mark>"The Hip-Hop Competition is an electrifying showcase of rhythm, creativity, and cultural expression, where dancers from diverse backgrounds come together to compete and celebrate the art of hip-hop."</mark></b></p>
+            <div class="other-photos" id="other3">
+                <h4>BACK</h4>
+                <img src="HIPHOP.jpg" alt="Other Image 1">
+                <p><b>Participants unleash their passion through dynamic routines that blend intricate footwork, powerful choreography, and freestyle improvisation, captivating audiences with their energy and style.</b></p>
+                <img src="HIPHOPv2.jpg" alt="Other Image 2">
+                <p><b>This event not only highlights individual talent but also fosters a sense of community and collaboration among dancers, as they push the boundaries of movement and self-expression.</b></p>
+                <img src="HIPHOPv3.jpg" alt="Other Image 3">
+                <p><b>With pulsating beats and vibrant performances, the Hip-Hop Competition is a thrilling celebration of talent, innovation, and the unbreakable spirit of hip-hop culture.</b></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleOtherPhotos(id) {
+            const otherPhotos = document.getElementById(id);
+            if (otherPhotos.style.display === "none" || otherPhotos.style.display === "") {
+                otherPhotos.style.display = "block";
+            } else {
+                otherPhotos.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
